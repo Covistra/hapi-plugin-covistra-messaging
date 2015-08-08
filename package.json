@@ -1,0 +1,13 @@
+{
+  "name": "covistra-messaging",
+  "version": "0.1.0",
+  "dependencies": {
+    "bluebird": "^2.9.34",
+    "bull": "^0.4.0",
+    "calibrate": "^2.0.2",
+    "joi": "^6.6.1",
+    "later": "^1.1.6",
+    "lodash": "^3.10.1",
+    "uuid": "^2.0.1"
+  }
+}
