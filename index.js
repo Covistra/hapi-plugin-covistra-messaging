@@ -24,7 +24,7 @@ exports.register = function (server, options, next) {
         plugin.log(['plugin', 'info'], "Registering the messaging plugin");
 
         var Router = server.plugins['system'].Router;
-        var config = server.plugins['covistra-config'].CurrentConfiguration;
+        var config = server.plugins['hapi-config'].CurrentConfiguration;
         var systemLog = server.plugins['system'].systemLog;
 
         // Expose our services
