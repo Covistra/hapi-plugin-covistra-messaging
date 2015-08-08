@@ -1,6 +1,10 @@
 {
   "name": "covistra-messaging",
   "version": "0.1.0",
+  "description": "Hapi Plugin adding high level messaging and worker services to your application. **Requires additional Covistra Framework plugins. Cannot be easily used standalone**",
+  "author": "joelgrenon@covistra.com",
+  "homepage": "http://www.covistra.com/framework/messaging",
+  "license": "Apache-2.0",
   "dependencies": {
     "bluebird": "^2.9.34",
     "bull": "^0.4.0",
@@ -9,5 +13,9 @@
     "later": "^1.1.6",
     "lodash": "^3.10.1",
     "uuid": "^2.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "sinon": "^1.15.4"
   }
 }
