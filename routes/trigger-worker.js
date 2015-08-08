@@ -24,7 +24,7 @@ var P = require('bluebird'),
 
 module.exports = function(server) {
 
-    var workerService = server.plugins['messaging'].workerService;
+    var workerService = server.plugins['covistra-messaging'].workerService;
 
     function handler(req, reply) {
         req.log.debug("Trigger worker %s", req.params.workerKey);
