@@ -25,7 +25,7 @@ exports.register = function (server, options, next) {
 
         var Router = server.plugins['covistra-system'].Router;
         var config = server.plugins['hapi-config'].CurrentConfiguration;
-        var systemLog = server.plugins['system'].systemLog;
+        var systemLog = server.plugins['covistra-system'].systemLog;
 
         // Expose our services
         plugin.expose('channelManager', require('./lib/channel-manager')(config, server, systemLog.child({service:'channel-manager'})));
