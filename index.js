@@ -23,7 +23,7 @@ exports.register = function (server, options, next) {
     server.dependency(['covistra-socket'], function(plugin, done) {
         plugin.log(['plugin', 'info'], "Registering the messaging plugin");
 
-        var Router = server.plugins['system'].Router;
+        var Router = server.plugins['covistra-system'].Router;
         var config = server.plugins['hapi-config'].CurrentConfiguration;
         var systemLog = server.plugins['system'].systemLog;
 
@@ -41,5 +41,5 @@ exports.register = function (server, options, next) {
 };
 
 exports.register.attributes = {
-    pkg: require('./package.json')
+    pkg: require(__dirname + '/package.json')
 };

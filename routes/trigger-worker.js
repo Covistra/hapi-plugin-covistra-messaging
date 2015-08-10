@@ -18,7 +18,8 @@
 
 var P = require('bluebird'),
     Calibrate = require('calibrate'),
-    pkg = require('../../../package.json'),
+    path = require('path'),
+    pkg = require(path.resolve(__dirname, '..', 'package.json')),
     later = require('later'),
     _ = require('lodash');
 
