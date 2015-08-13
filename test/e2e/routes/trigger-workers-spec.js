@@ -32,7 +32,7 @@ describe('route:trigger-workers', function () {
                 profile: {}
             };
 
-            workerService = ctx.server.plugins['messaging'].workerService;
+            workerService = ctx.server.plugins['covistra-messaging'].workerService;
 
             done();
         });
