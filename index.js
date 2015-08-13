@@ -28,8 +28,8 @@ exports.register = function (server, options, next) {
         var systemLog = server.plugins['covistra-system'].systemLog;
 
         // Expose our services
-        plugin.expose('channelManager', require('./lib/channel-manager')(config, server, systemLog.child({service:'channel-manager'})));
-        plugin.expose('workerService', require('./lib/worker-service')(config, server, systemLog.child({service:'worker-service'})));
+        plugin.expose('channelManager', require('./lib/channel-manager')(server, systemLog.child({service:'channel-manager'}), config));
+        plugin.expose('workerService', require('./lib/worker-service')(server, systemLog.child({service:'worker-service'}), config));
 
         // Register routes
         Router.routes(plugin, __dirname, "./routes");
