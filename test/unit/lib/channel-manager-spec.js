@@ -23,7 +23,7 @@ describe('ChannelManager', function() {
     var ChannelManager;
 
     before(function () {
-        ChannelManager = env.require('./lib/channel-manager')(env.server, env.config);
+        ChannelManager = env.require('./lib/channel-manager')(env.server, env.log, env.config);
     });
 
     describe('cstor', function() {
