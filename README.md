@@ -16,5 +16,3 @@ existing security strategies is critical in today's realtime applications. This 
 A channel is a logical grouping of clients used to broadcast messages. Clients will subscribe to one or more channels of
 interest to receive and send messages. Some channels are read-only for clients, while other are bi-directional.
 
-
-
