@@ -18,20 +18,16 @@
 "use strict";
 var P = require('bluebird');
 
+exprots.deps = ['covistra-socket'];
 exports.register = function (server, options, next) {
+    plugin.log(['plugin', 'info'], "Registering the messaging plugin");
 
-    server.dependency(['covistra-socket'], function(plugin, done) {
-        plugin.log(['plugin', 'info'], "Registering the messaging plugin");
+    var config = server.plugins['hapi-config'].CurrentConfiguration;
+    var systemLog = server.plugins['covistra-system'].systemLog;
 
-        var config = server.plugins['hapi-config'].CurrentConfiguration;
-        var systemLog = server.plugins['covistra-system'].systemLog;
-
-        // Expose our services
-        plugin.expose('channelManager', require('./lib/channel-manager')(server, systemLog.child({service:'channel-manager'}), config));
-        plugin.expose('workerService', require('./lib/worker-service')(server, systemLog.child({service:'worker-service'}), config));
-
-        done();
-    });
+    // Expose our services
+    plugin.expose('channelManager', require('./lib/channel-manager')(server, systemLog.child({service:'channel-manager'}), config));
+    plugin.expose('workerService', require('./lib/worker-service')(server, systemLog.child({service:'worker-service'}), config));
 
     next();
 };
