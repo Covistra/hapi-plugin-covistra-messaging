@@ -18,7 +18,7 @@
 "use strict";
 var P = require('bluebird');
 
-exprots.deps = ['covistra-socket'];
+exports.deps = ['covistra-socket'];
 exports.register = function (server, options, next) {
     plugin.log(['plugin', 'info'], "Registering the messaging plugin");
 
