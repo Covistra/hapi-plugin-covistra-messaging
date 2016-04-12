@@ -1,6 +1,6 @@
 {
   "name": "covistra-messaging",
-  "version": "0.5.4-pre",
+  "version": "0.6.0",
   "description": "Hapi Plugin adding high level messaging and worker services to your application. **Requires additional Covistra Framework plugins. Cannot be easily used standalone**",
   "author": "joelgrenon@covistra.com",
   "homepage": "http://www.covistra.com/framework/messaging",
